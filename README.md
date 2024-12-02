@@ -5,22 +5,6 @@
 
 - nSLOC:
 
-
-- [VyStablecoin](#vystablecoin)
-- [About](#about)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Quickstart](#quickstart)
-- [Usage](#usage)
-  - [Compile](#compile)
-  - [Test](#test)
-- [Formatting](#formatting)
-  - [Python](#python)
-  - [Vyper](#vyper)
-- [Scope](#scope)
-- [Known Issues](#known-issues)
-
 [//]: # (contest-details-open)
 
 # About
