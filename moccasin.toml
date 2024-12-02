@@ -1,0 +1,51 @@
+[project]
+src = "src"
+out = "out"
+dot_env = ".env"
+name = "moccasin_project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["snekmate"]
+
+# ------------------------------------------------------------------
+#                           DEPLOYERS
+# ------------------------------------------------------------------
+[networks.contracts.eth_usd_price_feed]
+deployer_script = "script/mocks/deploy_price_feed.py"
+
+[networks.contracts.btc_usd_price_feed]
+deployer_script = "script/mocks/deploy_price_feed.py"
+
+[networks.contracts.weth]
+deployer_script = "script/mocks/deploy_collateral.py"
+
+[networks.contracts.wbtc]
+deployer_script = "script/mocks/deploy_collateral.py"
+
+[networks.contracts.decentralized_stable_coin]
+deployer_script = "script/deploy_dsc.py"
+
+# ------------------------------------------------------------------
+#                            NETWORKS
+# ------------------------------------------------------------------
+[networks.zksync-fork]
+url = "$ZKSYNC_RPC_URL"
+chain_id = 324
+is_zksync = true
+prompt_live = false
+fork = true
+explorer_type = "zksyncexplorer"
+explorer_url = "https://zksync2-mainnet-explorer.zksync.io"
+
+# ------------------------------------------------------------------
+#                       NETWORK CONTRACTS
+# ------------------------------------------------------------------
+[networks.zksync.contracts]
+eth_usd_price_feed = { address = "0xfEefF7c3fB57d18C5C6Cdd71e45D2D0b4F9377bF" }
+btc_usd_price_feed = { address = "0x95Bc57e794aeb02E4a16eff406147f3ce2531F83" }
+weth = { address = "0xf00DAD97284D0c6F06dc4Db3c32454D4292c6813" }
+wbtc = { address = "0xBBeB516fb02a01611cBBE0453Fe3c580D7281011" }
+
+# You can view all configuration options at https://cyfrin.github.io/moccasin/all_moccasin_toml_parameters.html
