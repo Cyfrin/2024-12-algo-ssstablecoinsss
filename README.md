@@ -3,7 +3,7 @@
 - Starts: December 05, 2024 Noon UTC
 - Ends: Dec 12, 2024 Noon UTC
 
-- nSLOC:
+- nSLOC: 326
 
 [//]: # (contest-details-open)
 
